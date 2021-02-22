@@ -1,0 +1,16 @@
+.day {
+  font-size: 2rem;
+  color: transparent;
+  padding: 10px;
+  border: 5px solid transparent;
+}
+
+.currentMonthDay {
+  color: #b8b8b8;
+}
+
+.currentDay {
+  color: red;
+  border: 5px solid red;
+  border-radius: 50%;
+}

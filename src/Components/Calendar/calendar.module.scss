@@ -1,0 +1,50 @@
+:root {
+  $calendar-color: #009a92;
+  $day-color: #ec1456;
+}
+
+.calendarWrapper {
+  display: flex;
+
+  width: 800px;
+  border: 10px solid var(--calendar-color);
+
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nowDayWrap {
+  background-color: #35cfc5;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+
+.dayName {
+  font-weight: lighter;
+}
+
+.nowDay {
+  font-size: 7rem;
+}
+
+.nowMonthWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.monthAndYear {
+  color: var(--calendar-color);
+  font-size: 24px;
+}
+
+.dayWeek {
+  color: var(--day-color);
+}
+
+.days {
+  color: #b8b8b8;
+}
