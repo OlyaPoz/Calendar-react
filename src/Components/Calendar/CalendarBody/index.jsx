@@ -1,7 +1,7 @@
 import React from 'react';
 import { format } from 'date-fns';
 import Month from '../Month';
-
+import styles from './CalendarBody.module.scss';
 
 const WeekDays = () => {
   return (
@@ -19,12 +19,15 @@ const WeekDays = () => {
 
 const CalendarBody = props => {
   const { currentDay } = props;
+
   return (
     <div>
       <table>
-        <caption>{format(currentDay, 'MMMM', 'yyyy')}</caption>
-
-        <thead>
+        <caption className={styles.monthAndYear}>
+          {format(currentDay, 'MMMM ')}
+          {format(currentDay, 'yyyy')}
+        </caption>
+        <thead className={styles.daysOfWeek}>
           <WeekDays />
         </thead>
 

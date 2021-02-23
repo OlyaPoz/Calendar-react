@@ -21,7 +21,7 @@ const Month = props => {
       />
     );
   }
-  return <>{[weekArray]}</>;
+  return <>{weekArray}</>;
 };
 
 Month.propTypes = {
