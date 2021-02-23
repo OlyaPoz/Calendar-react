@@ -3,12 +3,15 @@
   color: white;
   width: 50%;
   text-align: center;
-}
-
-.nowDayName {
+  padding: 50px 0;
   font-weight: lighter;
+
+  .nowDayName {
+    margin-bottom: 40px;
+  }
+  
+  .nowDay {
+    font-size: 11rem;
+  }
 }
 
-.nowDay {
-  font-size: 7rem;
-}

@@ -21,7 +21,7 @@ const CalendarBody = props => {
   const { currentDay } = props;
 
   return (
-    <div>
+    <div className = {styles.monthWrapper}>
       <table>
         <caption className={styles.monthAndYear}>
           {format(currentDay, 'MMMM ')}
