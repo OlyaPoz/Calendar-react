@@ -11,7 +11,7 @@ const Week = props => {
   for (let i = 0; i < 7; i++) {
     dayArray.push(
       <Day
-        key={`${i}-${year}-${week}`}
+        key={`${year}-${week}-${i}`}
         day={addDays(startOfWeek, i)}
         currentDay={currentDay}
       />

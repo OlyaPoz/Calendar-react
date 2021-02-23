@@ -8,7 +8,7 @@ const Day = props => {
   const { day, currentDay } = props;
 
   const classNames = cx(styles.day, {
-    [styles.curentMonthDay]: isSameMonth(day, currentDay),
+    [styles.currentMonthDay]: isSameMonth(day, currentDay),
     [styles.currentDay]: isToday(day),
   });
 

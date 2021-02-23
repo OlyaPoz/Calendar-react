@@ -1,6 +1,7 @@
 import React from 'react';
 import { parse, addWeeks, getWeek, getYear, getWeeksInMonth } from 'date-fns';
 import Week from '../Weeks';
+import PropTypes from 'prop-types';
 
 const Month = props => {
   const { year, month, currentDay } = props;
@@ -16,11 +17,16 @@ const Month = props => {
         key={`${year}-${month}-${i}`}
         currentDay={currentDay}
         year={getYear(startOfWeek)}
-        month={getWeek(startOfWeek)}
+        week={getWeek(startOfWeek)}
       />
     );
   }
   return <>{[weekArray]}</>;
+};
+
+Month.propTypes = {
+  year: PropTypes.number.isRequired,
+  month: PropTypes.number.isRequired,
 };
 
 export default Month;

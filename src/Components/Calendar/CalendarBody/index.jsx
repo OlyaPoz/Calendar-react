@@ -1,7 +1,7 @@
 import React from 'react';
 import { format } from 'date-fns';
 import Month from '../Month';
-//import Week from '../Weeks';
+
 
 const WeekDays = () => {
   return (
