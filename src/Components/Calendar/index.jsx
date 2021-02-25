@@ -13,7 +13,7 @@ export default class Calendar extends Component {
 
   render () {
     return (
-      <div className = {styles.calendarWrapper}>
+      <div className={styles.calendarWrapper}>
         <CurrentDay currentDay={this.state.curentDay} />
         <CalendarBody currentDay={this.state.curentDay} />
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { format } from 'date-fns';
+import { format, getYear, getMonth } from 'date-fns';
 import Month from '../Month';
 import styles from './CalendarBody.module.scss';
 
@@ -19,9 +19,11 @@ const WeekDays = () => {
 
 const CalendarBody = props => {
   const { currentDay } = props;
+  const nowYear = getYear(currentDay);
+  const nowMonth = getMonth(currentDay) + 1;
 
   return (
-    <div className = {styles.monthWrapper}>
+    <div className={styles.monthWrapper}>
       <table>
         <caption className={styles.monthAndYear}>
           {format(currentDay, 'MMMM y')}
@@ -31,7 +33,7 @@ const CalendarBody = props => {
         </thead>
 
         <tbody>
-          <Month year={2021} month={2} currentDay={currentDay} />
+          <Month year={nowYear} month={nowMonth} currentDay={currentDay} />
         </tbody>
       </table>
     </div>

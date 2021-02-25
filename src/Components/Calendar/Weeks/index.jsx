@@ -6,10 +6,8 @@ const Week = props => {
   const { year, week, currentDay } = props;
 
   const startOfWeek = parse(`${year} ${week}`, 'Y w', new Date());
-  const dayArray = new Array(7)
-  .fill(null)
-  .map((_, i) => {
-    return(
+  const dayArray = new Array(7).fill(null).map((_, i) => {
+    return (
       <Day
         key={`${year}-${week}-${i}`}
         day={addDays(startOfWeek, i)}
