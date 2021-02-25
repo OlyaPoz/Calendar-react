@@ -18,6 +18,7 @@ const WeekDays = () => {
 };
 
 const CalendarBody = props => {
+
   const { currentDay } = props;
   const nowYear = getYear(currentDay);
   const nowMonth = getMonth(currentDay) + 1;
@@ -25,9 +26,13 @@ const CalendarBody = props => {
   return (
     <div className={styles.monthWrapper}>
       <table>
+
         <caption className={styles.monthAndYear}>
+          <button onClick={currentDay.handlerMonthPrev}>{'<'}</button>
           {format(currentDay, 'MMMM y')}
+          <button onClick={currentDay.handlerMonthNext}>{'>'}</button>
         </caption>
+
         <thead className={styles.daysOfWeek}>
           <WeekDays />
         </thead>
