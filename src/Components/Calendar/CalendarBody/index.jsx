@@ -24,8 +24,7 @@ const CalendarBody = props => {
     <div className = {styles.monthWrapper}>
       <table>
         <caption className={styles.monthAndYear}>
-          {format(currentDay, 'MMMM ')}
-          {format(currentDay, 'yyyy')}
+          {format(currentDay, 'MMMM y')}
         </caption>
         <thead className={styles.daysOfWeek}>
           <WeekDays />

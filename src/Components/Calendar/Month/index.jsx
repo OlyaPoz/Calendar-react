@@ -7,12 +7,12 @@ const Month = props => {
   const { year, month, currentDay } = props;
 
   const startOfMonth = parse(`${year} ${month}`, 'y M', new Date());
-  const weekAmount = getWeeksInMonth(startOfMonth);
-  const weekArray = [];
 
-  for (let i = 0; i < weekAmount; i++) {
-    const startOfWeek = addWeeks(startOfMonth, i);
-    weekArray.push(
+  const weekArray = new Array(getWeeksInMonth(startOfMonth))
+  .fill(null)
+  .map((_, i) => {
+    const startOfWeek = addWeeks(startOfMonth, i)
+    return(
       <Week
         key={`${year}-${month}-${i}`}
         currentDay={currentDay}
@@ -20,10 +20,10 @@ const Month = props => {
         week={getWeek(startOfWeek)}
       />
     );
-  }
+  });
   return <>{weekArray}</>;
 };
-
+  
 Month.propTypes = {
   year: PropTypes.number.isRequired,
   month: PropTypes.number.isRequired,
